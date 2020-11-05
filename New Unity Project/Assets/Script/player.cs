@@ -12,36 +12,39 @@ public class player : MonoBehaviour
     [Tooltip("Rotation speed in */s")]
     [SerializeField] float m_RotSpeed;
 
+    private Vector3 DirectionDeplacement = Vector3.zero;
+    private CharacterController Player;
+    public int Sensi;
+
     Transform m_Transform;
 
-    Rigidbody m_RigidBody;
+
 
     private void Awake()
     {
         m_Transform = GetComponent<Transform>();
-        m_RigidBody = GetComponent<Rigidbody>();
     }
 
 
     void Start()
     {
-        
+        Player = GetComponent<CharacterController>();  
     }
 
     // Update is called once per frame
     void Update()
     {
+        DirectionDeplacement.z = Input.GetAxisRaw("Vertical");
+        DirectionDeplacement.x = Input.GetAxisRaw("Horizontal");
+        DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
+        Player.Move(DirectionDeplacement * m_TranslatationSpeed * Time.deltaTime);
+
+        transform.Rotate(0, Input.GetAxisRaw("Mouse X")*Sensi, 0);
 
     }
 
     private void FixedUpdate()
     {
-        float mouveHorizontal = Input.GetAxis("Horizontal");
-        float mouveVertical = Input.GetAxis("Vertical");
-
-        Vector3 mouvment = new Vector3(mouveHorizontal, 0, mouveVertical);
-        m_RigidBody.AddForce(mouvment * m_TranslatationSpeed * Time.deltaTime);
-        float rotAngle = mouveHorizontal * m_RotSpeed * Time.fixedDeltaTime;
 
     }
 }
