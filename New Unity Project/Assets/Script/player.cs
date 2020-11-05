@@ -15,6 +15,7 @@ public class player : MonoBehaviour
     private Vector3 DirectionDeplacement = Vector3.zero;
     private CharacterController Player;
     public int Sensi;
+    public int gravite = 20;
 
     Transform m_Transform;
 
@@ -34,12 +35,19 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //déplacement
         DirectionDeplacement.z = Input.GetAxisRaw("Vertical");
         DirectionDeplacement.x = Input.GetAxisRaw("Horizontal");
         DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
         Player.Move(DirectionDeplacement * m_TranslatationSpeed * Time.deltaTime);
 
         transform.Rotate(0, Input.GetAxisRaw("Mouse X")*Sensi, 0);
+
+        //Gravité
+        if(!Player.isGrounded)
+        {
+            DirectionDeplacement.y -= gravite * Time.deltaTime;
+        }
 
     }
 
