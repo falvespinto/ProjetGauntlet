@@ -56,6 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\player.cs" />
+    <Compile Include="Assets\Script\monstre.cs" />
+    <Compile Include="Assets\Script\Souris.cs" />
+    <Compile Include="Assets\Script\Tir.cs" />
+    <Compile Include="Assets\Script\IKControl.cs" />
+    <Compile Include="Assets\Script\DestroyTir.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
