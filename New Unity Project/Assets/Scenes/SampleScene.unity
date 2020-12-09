@@ -489,6 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 1300776567}
   agent: {fileID: 319577522}
+  VieEnemie: 50
 --- !u!136 &319577524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -572,6 +573,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
       propertyPath: m_Name
       value: Colonne (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
@@ -848,6 +857,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colonne (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
 --- !u!1 &802070142
@@ -1004,6 +1021,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
       propertyPath: m_Name
       value: Colonne
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
@@ -1246,6 +1271,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colonne (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
 --- !u!1 &1300776563
@@ -1480,6 +1513,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colonne (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
 --- !u!4 &1501438363 stripped
@@ -1572,6 +1613,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
       propertyPath: m_Name
       value: Colonne (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4761bb6348f0503498b519bb8937d5e9, type: 3}

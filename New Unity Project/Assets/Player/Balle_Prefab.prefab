@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6923775026361398831}
   m_Layer: 0
   m_Name: Balle_Prefab
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
