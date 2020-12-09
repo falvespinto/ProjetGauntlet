@@ -12,15 +12,14 @@ public class monstre : MonoBehaviour
     void Start()
     {
         agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        Target = GameObject.Find("Player").GetComponent<Transform>();
         
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Bullet")
-        {
             VieEnemie -= 10;
-        }
     }
 
 

@@ -17,6 +17,8 @@ public class player : MonoBehaviour
     public int Sensi;
     public int gravite = 20;
 
+    public int ViePlayer = 100;
+
     Transform m_Transform;
 
 
@@ -31,6 +33,15 @@ public class player : MonoBehaviour
     {
         Player = GetComponent<CharacterController>();  
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Monstre")
+            ViePlayer -= 10;
+
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -48,6 +59,9 @@ public class player : MonoBehaviour
         {
             DirectionDeplacement.y -= gravite * Time.deltaTime;
         }
+
+        if (ViePlayer <= 0)
+            Destroy(gameObject);
 
     }
 
