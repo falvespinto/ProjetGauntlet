@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class monstre : MonoBehaviour
 {
+    public Transform Target;
+    public UnityEngine.AI.NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
+        agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        agent.destination = Target.position;
     }
 }
