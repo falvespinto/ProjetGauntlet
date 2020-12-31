@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 10}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 174
+  controlID: 177
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 175
+  controlID: 178
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -455,21 +455,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script
+    - Assets/Materials/Prefab
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script
+  - Assets/Materials/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\ProjetGauntlet\New Unity Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee3d0000
-    m_LastClickedID: 15854
-    m_ExpandedIDs: 00000000d23d000000ca9a3b
+    m_SelectedIDs: fa400000
+    m_LastClickedID: 16634
+    m_ExpandedIDs: 00000000d63d0000dc3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -497,7 +497,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d23d0000d43d0000d63d0000
+    m_ExpandedIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -619,9 +619,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d206feff
-      m_LastClickedID: -129326
-      m_ExpandedIDs: 2212feffac39feff203ffeff404cfeff144efeff664ffeff20f9ffff
+      m_SelectedIDs: b2370000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 40fbffff5e370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -681,9 +681,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 512, y: 384, z: 0}
+    m_Target: {x: -134.4264, y: 30.489817, z: -10.474573}
     speed: 2
-    m_Value: {x: 512, y: 384, z: 0}
+    m_Value: {x: -134.4264, y: 30.489817, z: -10.474573}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -730,13 +730,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0040237326, y: -0.98448884, z: 0.1745742, w: 0.022741277}
+    m_Target: {x: -0.59524274, y: -0.0066981628, z: 0.005062838, w: -0.8036599}
     speed: 2
-    m_Value: {x: 0.0040232744, y: -0.9843768, z: 0.17455432, w: 0.022738688}
+    m_Value: {x: -0.5951672, y: -0.0066973134, z: 0.005062196, w: -0.803558}
   m_Size:
-    m_Target: 640
+    m_Target: 6.4710855
     speed: 2
-    m_Value: 640
+    m_Value: 6.4710855
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -816,7 +816,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -830,18 +830,18 @@ MonoBehaviour:
       y: 21
       width: 857
       height: 419
-    m_Scale: {x: 0.68430394, y: 0.68430394}
-    m_Translation: {x: 428.49997, y: 221.24013}
+    m_Scale: {x: 0.8416073, y: 0.8416073}
+    m_Translation: {x: 428.485, y: 266.12064}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -626.1837
-      y: -323.30682
-      width: 1252.3674
-      height: 612.301
+      x: -509.127
+      y: -316.20526
+      width: 1018.2897
+      height: 497.8569
     m_MinimalGUI: 1
   m_defaultScale: 0.54557294
   m_LastWindowPixelSize: {x: 857, y: 440}

@@ -10,22 +10,22 @@ public class monstre : MonoBehaviour
     public UnityEngine.AI.NavMeshAgent agent;
     public int VieEnemie = 50;
 
-    private Animation animator;
+    private Animator _animator;
     private bool isDistanceCheck = false;
-    private float timeLeft = 3.0f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animation>();
+        _animator = GetComponent<Animator>();
         agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
         Target = GameObject.Find("Player").GetComponent<Transform>();
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet")
             VieEnemie -= 10;
     }
 
@@ -34,6 +34,16 @@ public class monstre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Attack();
+
+        if (VieEnemie <= 0)
+            Destroy(gameObject);
+
+
+    }
+
+    public void Attack()
+    {
         float distance = Vector3.Distance(transform.position, Target.position);
 
         agent.destination = Target.position;
@@ -41,19 +51,17 @@ public class monstre : MonoBehaviour
         {
             if (!isDistanceCheck)
                 isDistanceCheck = true;
-            else
-                timeLeft -= Time.deltaTime;
-            if(timeLeft <= 0.0f)
+            if (isDistanceCheck == true)
             {
                 //attack
-               // animator.SetBool("Attack", true);
+                _animator.SetBool("Attack", true);
             }
-            
+            else
+            {
+                _animator.SetBool("Attack", false);
+                isDistanceCheck = false;
+
+            }
         }
-
-        if (VieEnemie <= 0)
-            Destroy(gameObject);
-
-
     }
 }
