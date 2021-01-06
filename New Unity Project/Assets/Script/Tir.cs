@@ -7,6 +7,9 @@ public class Tir : MonoBehaviour
     public GameObject Projectile;
     public int Force = 50;
     public AudioClip SoundTir;
+    public GameObject PointTire;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class Tir : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             GetComponent<AudioSource>().PlayOneShot(SoundTir);
-            GameObject Bullet = Instantiate(Projectile, transform.position, Quaternion.identity) as GameObject;
+            GameObject Bullet = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;
             Bullet.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward) * Force;
             Destroy(Bullet, 2f);
 
