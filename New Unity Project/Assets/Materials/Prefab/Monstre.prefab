@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7969540355106557976}
   - component: {fileID: 7969540355106557977}
-  - component: {fileID: 7969540355106557982}
   - component: {fileID: 7969540355106557983}
+  - component: {fileID: 4851754398658335585}
   m_Layer: 0
   m_Name: Monstre
   m_TagString: Monstre
@@ -48,21 +48,6 @@ CapsuleCollider:
   m_Height: 4.6934705
   m_Direction: 2
   m_Center: {x: -0.53970957, y: 0.6385577, z: -0.26080155}
---- !u!114 &7969540355106557982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7969540355106557980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 062d7cc82b5bff34e8c98f4c63921992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 0}
-  agent: {fileID: 7969540355106557983}
-  VieEnemie: 50
 --- !u!195 &7969540355106557983
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -85,6 +70,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4851754398658335585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969540355106557980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062d7cc82b5bff34e8c98f4c63921992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetOne: {fileID: 0}
+  targetTwo: {fileID: 0}
+  agent: {fileID: 7969540355106557983}
+  VieEnemie: 50
 --- !u!1 &7969540356748397424
 GameObject:
   m_ObjectHideFlags: 0

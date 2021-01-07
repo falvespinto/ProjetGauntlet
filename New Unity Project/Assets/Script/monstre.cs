@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.AI;
 
-public class Monstre : MonoBehaviour
+public class monstre : MonoBehaviour
 {
     public Transform targetOne;
     public Transform targetTwo;

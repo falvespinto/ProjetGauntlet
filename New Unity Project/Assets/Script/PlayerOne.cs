@@ -53,7 +53,7 @@ public class PlayerOne : MonoBehaviour
         //déplacement
         DirectionDeplacement.z = Input.GetAxisRaw("Vertical");
         DirectionDeplacement.x = Input.GetAxisRaw("Horizontal");
-        DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
+        //DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
         Player.Move(DirectionDeplacement * m_TranslatationSpeed * Time.deltaTime);
 
 
