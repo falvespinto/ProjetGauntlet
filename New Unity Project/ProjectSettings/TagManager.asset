@@ -7,6 +7,9 @@ TagManager:
   - Bullet
   - Monstre
   - PointTire
+  - BulletP2
+  - ScoreP2
+  - ScoreP1
   layers:
   - Default
   - TransparentFX

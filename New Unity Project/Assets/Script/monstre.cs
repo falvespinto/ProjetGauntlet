@@ -29,6 +29,13 @@ public class Monstre : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
             VieEnemie -= 10;
+        else if (collision.gameObject.tag == "BulletP2")
+            VieEnemie -= 10;
+
+        if (collision.gameObject.tag == "Bullet" && VieEnemie <= 0)
+            ScoresPlayer.scoreValueP1 += 10;
+        else if (collision.gameObject.tag == "BulletP2" && VieEnemie <= 0)
+            ScoresPlayer.scoreValueP2 += 10;
     }
 
 
@@ -40,7 +47,6 @@ public class Monstre : MonoBehaviour
 
         if (VieEnemie <= 0)
         {
-            ScoresPlayer.scoreValue += 10;
             Destroy(gameObject);
         }
 
