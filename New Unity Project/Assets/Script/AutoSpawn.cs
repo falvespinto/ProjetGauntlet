@@ -6,11 +6,13 @@ public class AutoSpawn : MonoBehaviour
 {
     public Transform Player;
     public int DistanceDeSpawn;
+    public int VieSpawn = 80;
     public GameObject PrefabToSpawn;
     public float SpawnRate = 3f;
     public float Distance;
     public int MaxSpawn = 3;
     public bool ReSpawn;
+
 
     private float NextSpawn;
     private int Nbr;
@@ -22,6 +24,22 @@ public class AutoSpawn : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+            VieSpawn -= 10;
+        else if (collision.gameObject.tag == "BulletP2")
+            VieSpawn -= 10;
+
+        if (collision.gameObject.tag == "Bullet" && VieSpawn <= 0)
+            ScoresPlayer.scoreValueP1 += 50;
+        else if (collision.gameObject.tag == "BulletP2" && VieSpawn <= 0)
+            ScoresPlayer.scoreValueP2 += 50;
+    }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -52,5 +70,11 @@ public class AutoSpawn : MonoBehaviour
                 Nbr = Nb;
         }
 
+         if(VieSpawn <= 0)
+            Destroy(gameObject);
+
     }
+
+
+
 }

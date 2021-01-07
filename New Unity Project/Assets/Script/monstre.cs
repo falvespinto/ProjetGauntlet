@@ -46,9 +46,7 @@ public class Monstre : MonoBehaviour
         Attack();
 
         if (VieEnemie <= 0)
-        {
             Destroy(gameObject);
-        }
 
     }
 
