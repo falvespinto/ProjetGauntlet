@@ -4,9 +4,10 @@ using UnityEngine;
 using System;
 using UnityEngine.AI;
 
-public class monstre : MonoBehaviour
+public class Monstre : MonoBehaviour
 {
-    public Transform Target;
+    public Transform targetOne;
+    public Transform targetTwo;
     public UnityEngine.AI.NavMeshAgent agent;
     public int VieEnemie = 50;
 
@@ -19,7 +20,8 @@ public class monstre : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
-        Target = GameObject.Find("Player").GetComponent<Transform>();
+        targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
+        targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
 
     }
 
@@ -37,17 +39,27 @@ public class monstre : MonoBehaviour
         Attack();
 
         if (VieEnemie <= 0)
+        {
+            ScoresPlayer.scoreValue += 10;
             Destroy(gameObject);
-
+        }
 
     }
 
     public void Attack()
     {
-        float distance = Vector3.Distance(transform.position, Target.position);
+        float distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
+        float distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
 
-        agent.destination = Target.position;
-        if (distance <= 3)
+        if (distancePlayerOne < distancePlayerTwo)
+            agent.destination = targetOne.position;
+        else
+            agent.destination = targetTwo.position;
+
+
+
+
+        if (distancePlayerOne <= 3)
         {
             if (!isDistanceCheck)
                 isDistanceCheck = true;
