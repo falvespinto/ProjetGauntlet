@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\AutoSpawn.cs" />
     <Compile Include="Assets\Script\Pause.cs" />
     <Compile Include="Assets\Script\DestroyTir.cs" />
+    <Compile Include="Assets\Script\PlayerAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

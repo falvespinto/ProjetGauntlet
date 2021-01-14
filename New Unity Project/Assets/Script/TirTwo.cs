@@ -23,7 +23,8 @@ public class TirTwo : MonoBehaviour
         if (Input.GetButtonDown("TireManette"))
         {
             GetComponent<AudioSource>().PlayOneShot(SoundTir);
-            GameObject BulletP2 = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;
+            //GameObject BulletP2 = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;
+            GameObject BulletP2 = Instantiate(Projectile, transform.position, PointTire.transform.rotation) as GameObject;
             BulletP2.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward) * Force;
             Destroy(BulletP2, 2f);
 
