@@ -53,7 +53,9 @@ public class PlayerTwo : MonoBehaviour
         //déplacement
         DirectionDeplacement.z = -Input.GetAxis("LeftJoystickY");
         DirectionDeplacement.x = Input.GetAxis("LeftJoystickX");
+        //DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
         Player.Move(DirectionDeplacement * m_TranslatationSpeed * Time.deltaTime);
+
 
         transform.Rotate(0, Input.GetAxis("RigthJoystickX") * Sensi, 0);
 
