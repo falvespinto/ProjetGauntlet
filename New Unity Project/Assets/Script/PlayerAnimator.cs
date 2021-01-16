@@ -23,6 +23,10 @@ public class PlayerAnimator : MonoBehaviour
         {
             anim.Play("Attaque");
         }
+        if (Input.GetButton("Fire1"))
+        {
+            anim.Play("AttaqueMag");
+        }
 
         //Ne fonctionne pas
         if (y != 0 || x != 0)

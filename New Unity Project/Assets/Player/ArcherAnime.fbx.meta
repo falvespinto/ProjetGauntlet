@@ -102,7 +102,7 @@ ModelImporter:
       name: Marche
       takeName: Armature|ArmatureAction
       internalID: 0
-      firstFrame: 25
+      firstFrame: 0
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
