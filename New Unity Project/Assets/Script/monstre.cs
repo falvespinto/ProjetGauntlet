@@ -43,6 +43,8 @@ public class monstre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         Attack();
 
         if (VieEnemie <= 0)

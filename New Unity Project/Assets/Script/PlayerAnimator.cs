@@ -31,7 +31,7 @@ public class PlayerAnimator : MonoBehaviour
         //Ne fonctionne pas
         if (y != 0 || x != 0)
         {
-            anim.Play("Marche");
+            anim.SetBool("BoolMarche",true);
         }
 
     }
