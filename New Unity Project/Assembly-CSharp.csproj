@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\ScoresPlayer.cs" />
+    <Compile Include="Assets\Script\PlayerAnimator.cs" />
     <Compile Include="Assets\Script\TirTwo.cs" />
     <Compile Include="Assets\Script\PlayerTwo.cs" />
     <Compile Include="Assets\Script\IKControl.cs" />
@@ -67,11 +68,12 @@
     <Compile Include="Assets\Script\AutoSpawn.cs" />
     <Compile Include="Assets\Script\Pause.cs" />
     <Compile Include="Assets\Script\DestroyTir.cs" />
-    <Compile Include="Assets\Script\PlayerAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\WorldMaterialsFree\WorldMatLiteFree.shader" />
+     <None Include="Assets\WorldMaterialsFree\WorldMatFree.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
