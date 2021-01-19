@@ -45,6 +45,14 @@ public class PlayerTwo : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Monstre")
+            ViePlayer -= 10;
+
+
+
+    }
 
 
     // Update is called once per frame

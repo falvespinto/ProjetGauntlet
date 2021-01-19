@@ -44,6 +44,14 @@ public class PlayerOne : MonoBehaviour
         mainCamera = FindObjectOfType<Camera>();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Monstre")
+            ViePlayer -= 10;
+
+
+
+    }
 
 
 

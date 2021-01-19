@@ -6,13 +6,17 @@ using UnityEngine.AI;
 
 public class monstre : MonoBehaviour
 {
+    public Transform Player;
     public Transform targetOne;
     public Transform targetTwo;
     public UnityEngine.AI.NavMeshAgent agent;
     public int VieEnemie = 50;
+    private bool Player1isDead;
+    private bool Player2isDead;
 
-    private Animator _animator;
+    public Animator _animator;
     private bool isDistanceCheck = false;
+    private float timeLeft = 1.0f;
 
 
     // Start is called before the first frame update
@@ -20,8 +24,7 @@ public class monstre : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
-        targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
-        targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
+
 
     }
 
@@ -43,43 +46,48 @@ public class monstre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Player1isDead)
+        {
+
+        }
+        targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
+        targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
+        float distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
+        float distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
+
+        Debug.Log(targetOne);
+        Debug.Log(targetTwo);
+        if (distancePlayerOne < distancePlayerTwo)
+        {
+            Debug.Log("step 1 ok");
+            agent.destination = targetOne.position;
+        }
+
+        else
+        {
+            agent.destination = targetTwo.position;
+            Debug.Log("step 2 ok");
+        }
+
+
+
+        
+        
+        
+            //if (GameObject.FindGameObjectsWithTag("Player") != null)
+            //{
+            //    GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
+            //}
         
 
-        Attack();
+
+
 
         if (VieEnemie <= 0)
             Destroy(gameObject);
 
     }
 
-    public void Attack()
-    {
-        float distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
-        float distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
 
-        if (distancePlayerOne < distancePlayerTwo)
-            agent.destination = targetOne.position;
-        else
-            agent.destination = targetTwo.position;
-
-
-
-
-        if (distancePlayerOne <= 3)
-        {
-            if (!isDistanceCheck)
-                isDistanceCheck = true;
-            if (isDistanceCheck == true)
-            {
-                //attack
-                _animator.SetBool("Attack", true);
-            }
-            else
-            {
-                _animator.SetBool("Attack", false);
-                isDistanceCheck = false;
-
-            }
-        }
-    }
+    
 }

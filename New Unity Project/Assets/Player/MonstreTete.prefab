@@ -309,9 +309,10 @@ GameObject:
   - component: {fileID: 6850698036359880166}
   - component: {fileID: 6040444482233656459}
   - component: {fileID: 6040444482233656456}
+  - component: {fileID: 6671280000876617219}
   m_Layer: 0
   m_Name: MonstreTete
-  m_TagString: Untagged
+  m_TagString: Monstre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,6 +415,7 @@ MonoBehaviour:
   targetTwo: {fileID: 0}
   agent: {fileID: 0}
   VieEnemie: 50
+  _animator: {fileID: 6671280000876617219}
 --- !u!195 &6040444482233656456
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -436,6 +438,25 @@ NavMeshAgent:
   m_BaseOffset: 0.7
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &6671280000876617219
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040444482233656457}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb85790ba8e25a24b9bf510b24985b16, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6280723096081692150
 GameObject:
   m_ObjectHideFlags: 0

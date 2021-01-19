@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  DistanceDeSpawn: 50
-  VieSpawn: 80
+  DistanceDeSpawn: 30
+  VieSpawn: 100
   PrefabToSpawn: {fileID: 6040444482233656457, guid: afd5212bba25cba43b55540622f08c10, type: 3}
   SpawnRate: 5
-  Distance: 4
+  Distance: 1
   MaxSpawn: 15
   ReSpawn: 1
 --- !u!136 &3994093909393816525
