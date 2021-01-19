@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3844174137079430838}
   - component: {fileID: 7840297770949076302}
   - component: {fileID: 4453868279092711898}
+  - component: {fileID: 3500447026436290553}
   m_Layer: 0
   m_Name: Boule de feu
   m_TagString: Bullet
@@ -4985,3 +4986,15 @@ CapsuleCollider:
   m_Height: 0.9943108
   m_Direction: 1
   m_Center: {x: -0.02, y: -0.02, z: -0.01}
+--- !u!122 &3500447026436290553
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136642046850737449}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278193407
+  m_Size: 0.7

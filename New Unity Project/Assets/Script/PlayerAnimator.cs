@@ -23,9 +23,33 @@ public class PlayerAnimator : MonoBehaviour
         {
             anim.Play("Attaque");
         }
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        {
+            anim.SetBool("MageBoolMarche", true);
+            
+        }
+        else
+        {
+            anim.SetBool("MageBoolMarche", false);
+        }
+
+        if (Input.GetAxis("LeftJoystickX")!=0  || -Input.GetAxis("LeftJoystickY")!=0)
+        {
+            anim.SetBool("ArcherBoolMarche", true);
+        }
+        else
+        {
+            anim.SetBool("ArcherBoolMarche", false);
+        }
+
+        //if (Input.GetButton("down"))
+        //{
+        //    anim.SetBool("Marche",true);
+        //}
         if (Input.GetButton("Fire1"))
         {
             anim.Play("AttaqueMag");
+            anim.SetBool("BoolMarche", false);
         }
 
         //Ne fonctionne pas

@@ -25,7 +25,7 @@ public class Tir : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(SoundTir);
             GameObject Bullet = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;
             Bullet.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward) * Force;
-            Destroy(Bullet, 2f);
+            Destroy(Bullet, 4f);
 
         }
     }

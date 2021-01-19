@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-8692647686518877956
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Marche 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: -4767813774111216207, guid: 4a8416d5c938c974aa6809ef1b635105, type: 3}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &-7218436305991596432
 AnimatorState:
   serializedVersion: 5
@@ -63,7 +37,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: BoolAttaque
+    m_ConditionEvent: MageBoolAttaque
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7218436305991596432}
@@ -88,10 +62,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: BoolMarche
+    m_ConditionEvent: MageBoolMarche
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: BoolAttaque
+    m_ConditionEvent: MageBoolAttaque
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3824616138490750635}
@@ -116,10 +90,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: BoolMarche
+    m_ConditionEvent: MageBoolMarche
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: BoolAttaque
+    m_ConditionEvent: MageBoolAttaque
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3824616138490750635}
@@ -144,13 +118,13 @@ AnimatorController:
   m_Name: MageAnimator
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: BoolAttaque
+  - m_Name: MageBoolAttaque
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: BoolMarche
+  - m_Name: MageBoolMarche
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -178,7 +152,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: BoolMarche
+    m_ConditionEvent: MageBoolMarche
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6732008580389332367}
@@ -240,9 +214,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 6732008580389332367}
     m_Position: {x: 580, y: 190, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -8692647686518877956}
-    m_Position: {x: 615, y: 255, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -262,7 +233,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: BoolMarche
+    m_ConditionEvent: MageBoolMarche
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6732008580389332367}
@@ -286,7 +257,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Marche
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6088257936343812909}
@@ -315,10 +286,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: BoolAttaque
+    m_ConditionEvent: MageBoolAttaque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: BoolMarche
+    m_ConditionEvent: MageBoolMarche
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7218436305991596432}
