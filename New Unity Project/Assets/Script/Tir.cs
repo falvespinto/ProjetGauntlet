@@ -8,6 +8,8 @@ public class Tir : MonoBehaviour
     public int Force = 50;
     public AudioClip SoundTir;
     public GameObject PointTire;
+    public float FireRate;
+    private float NextFire;
     
     
 
@@ -20,12 +22,15 @@ public class Tir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && Time.time > NextFire)
         {
             GetComponent<AudioSource>().PlayOneShot(SoundTir);
             GameObject Bullet = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;
             Bullet.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward) * Force;
             Destroy(Bullet, 4f);
+
+            NextFire = Time.time + FireRate;
+
 
         }
     }

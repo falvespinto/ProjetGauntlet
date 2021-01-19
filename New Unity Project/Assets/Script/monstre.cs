@@ -10,14 +10,17 @@ public class monstre : MonoBehaviour
     public Transform targetOne;
     public Transform targetTwo;
     public UnityEngine.AI.NavMeshAgent agent;
-    public int VieEnemie = 50;
-    private bool Player1isDead;
-    private bool Player2isDead;
+    public int VieEnemie = 40;
+    private bool Player1isDead = false;
+    private bool Player2isDead = false;
 
     public Animator _animator;
     private bool isDistanceCheck = false;
     private float timeLeft = 1.0f;
 
+
+    private float distancePlayerOne;
+    private float distancePlayerTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +34,7 @@ public class monstre : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
-            VieEnemie -= 10;
+            VieEnemie -= 20;
         else if (collision.gameObject.tag == "BulletP2")
             VieEnemie -= 10;
 
@@ -39,6 +42,12 @@ public class monstre : MonoBehaviour
             ScoresPlayer.scoreValueP1 += 10;
         else if (collision.gameObject.tag == "BulletP2" && VieEnemie <= 0)
             ScoresPlayer.scoreValueP2 += 10;
+
+        if (collision.gameObject.tag == "Player")
+        {
+            _animator.Play("MonstreAttaqueBool");
+        }
+  
     }
 
 
@@ -46,39 +55,59 @@ public class monstre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Player1isDead)
-        {
+        Debug.Log(distancePlayerOne);
 
+        if (GameObject.Find("Player 1") != null && Player1isDead == false)
+        {
+            Debug.Log("step 1");
+            targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
+            distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
         }
-        targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
-        targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
-        float distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
-        float distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
-
-        Debug.Log(targetOne);
-        Debug.Log(targetTwo);
-        if (distancePlayerOne < distancePlayerTwo)
+        else { Player1isDead = true; }
+        if (GameObject.Find("Player 2") != null && Player2isDead == false)
         {
-            Debug.Log("step 1 ok");
+            Debug.Log("step 2");
+            targetTwo= GameObject.Find("Player 2").GetComponent<Transform>();
+            distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
+        }
+        else { Player2isDead = true; }
+
+        if (!Player1isDead && !Player2isDead)
+        {
+            Debug.Log("PlayerOne : " + Player1isDead);
+            Debug.Log("PlayerTwo : " + Player2isDead);
+
+            if (distancePlayerOne < distancePlayerTwo)
+            {
+                agent.destination = targetOne.position;
+
+            }
+            else
+            {
+                agent.destination = targetTwo.position;
+
+            }
+        }
+        if (Player1isDead && !Player2isDead)
+        {
+            agent.destination = targetTwo.position;
+        }
+
+        if (Player2isDead && !Player1isDead)
+        {
             agent.destination = targetOne.position;
         }
 
-        else
-        {
-            agent.destination = targetTwo.position;
-            Debug.Log("step 2 ok");
-        }
+        
 
 
 
-        
-        
-        
-            //if (GameObject.FindGameObjectsWithTag("Player") != null)
-            //{
-            //    GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
-            //}
-        
+
+        //if (GameObject.FindGameObjectsWithTag("Player") != null)
+        //{
+        //    GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
+        //}
+
 
 
 

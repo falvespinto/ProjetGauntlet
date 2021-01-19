@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class AutoSpawn : MonoBehaviour
 {
-    public Transform Player;
+    //public Transform Player;
     public int DistanceDeSpawn;
     public int VieSpawn = 80;
     public GameObject PrefabToSpawn;
     public float SpawnRate = 3f;
-    public float Distance;
+    private Transform targetOne;
+    private Transform targetTwo;
     public int MaxSpawn = 3;
     public bool ReSpawn;
 
-
+    private float distancePlayerOne;
+    private float distancePlayerTwo;
     private float NextSpawn;
     private int Nbr;
     private int Nb;
@@ -28,7 +30,7 @@ public class AutoSpawn : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
-            VieSpawn -= 10;
+            VieSpawn -= 20;
         else if (collision.gameObject.tag == "BulletP2")
             VieSpawn -= 10;
 
@@ -44,9 +46,13 @@ public class AutoSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Distance = Vector3.Distance(transform.position, Player.position);
 
-        if(Distance < DistanceDeSpawn && Nbr<MaxSpawn)
+        targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
+        distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
+        targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
+        distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
+
+        if (distancePlayerOne < DistanceDeSpawn && Nbr<MaxSpawn || distancePlayerTwo < DistanceDeSpawn && Nbr < MaxSpawn)
         {
             if (Time.time > NextSpawn)
             {

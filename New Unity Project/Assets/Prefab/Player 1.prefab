@@ -711,6 +711,7 @@ MonoBehaviour:
   Force: 15
   SoundTir: {fileID: 8300000, guid: 797bf588af4ee2244965b0cb1ffd1eb9, type: 3}
   PointTire: {fileID: 9141169474709060627}
+  FireRate: 0
 --- !u!1 &9141169475125604550
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +868,7 @@ MonoBehaviour:
   gravite: 20
   ViePlayer: 100
   moveSpeed: 5
+  FireRate: 1
 --- !u!143 &9141169475811332211
 CharacterController:
   m_ObjectHideFlags: 0

@@ -9,8 +9,8 @@ public class PlayerTwo : MonoBehaviour
     [Header("Translation & Rotation")]
     [SerializeField] float m_TranslatationSpeed;
 
-    [Tooltip("Rotation speed in */s")]
-    [SerializeField] float m_RotSpeed;
+    //[Tooltip("Rotation speed in */s")]
+    //[SerializeField] float m_RotSpeed;
 
 
     private CharacterController Player;

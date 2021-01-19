@@ -99,13 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625634ed6a7bb8a42a1c6fd125e805de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  DistanceDeSpawn: 30
+  DistanceDeSpawn: 40
   VieSpawn: 100
   PrefabToSpawn: {fileID: 6040444482233656457, guid: afd5212bba25cba43b55540622f08c10, type: 3}
-  SpawnRate: 5
-  Distance: 1
-  MaxSpawn: 15
+  SpawnRate: 3
+  MaxSpawn: 8
   ReSpawn: 1
 --- !u!136 &3994093909393816525
 CapsuleCollider:

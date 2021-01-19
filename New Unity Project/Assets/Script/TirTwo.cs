@@ -8,7 +8,8 @@ public class TirTwo : MonoBehaviour
     public int Force = 50;
     public AudioClip SoundTir;
     public GameObject PointTire;
-
+    public float FireRate;
+    private float NextFire;
 
 
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class TirTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("TireManette"))
+        if (Input.GetButtonDown("TireManette") && Time.time > NextFire)
         {
             GetComponent<AudioSource>().PlayOneShot(SoundTir);
             //GameObject BulletP2 = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;
@@ -28,6 +29,8 @@ public class TirTwo : MonoBehaviour
             BulletP2.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward) * Force;
             Destroy(BulletP2, 2f);
 
+
+            NextFire = Time.time + FireRate;
         }
     }
 

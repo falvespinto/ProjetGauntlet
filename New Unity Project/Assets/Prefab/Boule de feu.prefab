@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 9136642046850737443}
   - component: {fileID: 3844174137079430838}
   - component: {fileID: 7840297770949076302}
-  - component: {fileID: 4453868279092711898}
   - component: {fileID: 3500447026436290553}
   m_Layer: 0
   m_Name: Boule de feu
@@ -4972,20 +4971,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 68
   m_CollisionDetection: 0
---- !u!136 &4453868279092711898
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9136642046850737449}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4971554
-  m_Height: 0.9943108
-  m_Direction: 1
-  m_Center: {x: -0.02, y: -0.02, z: -0.01}
 --- !u!122 &3500447026436290553
 Halo:
   m_ObjectHideFlags: 0
