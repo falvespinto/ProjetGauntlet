@@ -20,6 +20,9 @@ public class AutoSpawn : MonoBehaviour
     private int Nbr;
     private int Nb;
 
+    private bool Player1isDead = false;
+    private bool Player2isDead = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,36 +50,127 @@ public class AutoSpawn : MonoBehaviour
     void Update()
     {
 
-        targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
-        distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
-        targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
-        distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
 
-        if (distancePlayerOne < DistanceDeSpawn && Nbr<MaxSpawn || distancePlayerTwo < DistanceDeSpawn && Nbr < MaxSpawn)
+
+
+
+
+
+
+
+
+
+
+        if (GameObject.Find("Player 1") != null && Player1isDead == false)
         {
-            if (Time.time > NextSpawn)
+            Debug.Log("step 1");
+            targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
+            distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
+        }
+        else { Player1isDead = true; }
+        if (GameObject.Find("Player 2") != null && Player2isDead == false)
+        {
+            Debug.Log("step 2");
+            targetTwo = GameObject.Find("Player 2").GetComponent<Transform>();
+            distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
+        }
+        else { Player2isDead = true; }
+
+
+        if (!Player1isDead && !Player2isDead)
+        {
+
+            if (distancePlayerOne < DistanceDeSpawn && Nbr < MaxSpawn || distancePlayerTwo < DistanceDeSpawn && Nbr < MaxSpawn)
             {
-                NextSpawn = Time.time + SpawnRate;
-                GameObject GO = Instantiate(PrefabToSpawn, transform.position, Quaternion.identity) as GameObject;
-                GO.name = "Enemie " + this.name;
-                Nbr++;
+                if (Time.time > NextSpawn)
+                {
+                    NextSpawn = Time.time + SpawnRate;
+                    GameObject GO = Instantiate(PrefabToSpawn, transform.position, Quaternion.identity) as GameObject;
+                    GO.name = "Enemie " + this.name;
+                    Nbr++;
+                }
+            }
+            if (ReSpawn)
+            {
+                Nb = 0;
+
+                foreach (GameObject Enn in FindObjectsOfType(typeof(GameObject)) as GameObject[])
+                {
+                    if (Enn.name == "Enemie " + this.name)
+                        Nb++;
+                }
+
+                if (Nb < MaxSpawn)
+                    Nbr = Nb;
             }
         }
-         if (ReSpawn)
+        if (Player1isDead && !Player2isDead)
         {
-            Nb = 0;
 
-            foreach (GameObject Enn in FindObjectsOfType(typeof(GameObject)) as GameObject[])
+            if (distancePlayerTwo < DistanceDeSpawn && Nbr < MaxSpawn)
             {
-                if (Enn.name == "Enemie " + this.name)
-                    Nb++;
+                if (Time.time > NextSpawn)
+                {
+                    NextSpawn = Time.time + SpawnRate;
+                    GameObject GO = Instantiate(PrefabToSpawn, transform.position, Quaternion.identity) as GameObject;
+                    GO.name = "Enemie " + this.name;
+                    Nbr++;
+                }
+            }
+            if (ReSpawn)
+            {
+                Nb = 0;
+
+                foreach (GameObject Enn in FindObjectsOfType(typeof(GameObject)) as GameObject[])
+                {
+                    if (Enn.name == "Enemie " + this.name)
+                        Nb++;
+                }
+
+                if (Nb < MaxSpawn)
+                    Nbr = Nb;
             }
 
-            if (Nb < MaxSpawn)
-                Nbr = Nb;
         }
 
-         if(VieSpawn <= 0)
+        if (Player2isDead && !Player1isDead)
+        {
+
+
+            if (distancePlayerOne < DistanceDeSpawn && Nbr < MaxSpawn)
+            {
+                if (Time.time > NextSpawn)
+                {
+                    NextSpawn = Time.time + SpawnRate;
+                    GameObject GO = Instantiate(PrefabToSpawn, transform.position, Quaternion.identity) as GameObject;
+                    GO.name = "Enemie " + this.name;
+                    Nbr++;
+                }
+            }
+            if (ReSpawn)
+            {
+                Nb = 0;
+
+                foreach (GameObject Enn in FindObjectsOfType(typeof(GameObject)) as GameObject[])
+                {
+                    if (Enn.name == "Enemie " + this.name)
+                        Nb++;
+                }
+
+                if (Nb < MaxSpawn)
+                    Nbr = Nb;
+            }
+
+        }
+
+
+
+
+
+
+
+
+        if (VieSpawn <= 0)
             Destroy(gameObject);
 
     }
