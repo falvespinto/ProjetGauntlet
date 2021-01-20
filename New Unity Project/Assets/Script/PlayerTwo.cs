@@ -25,8 +25,9 @@ public class PlayerTwo : MonoBehaviour
     private Camera mainCamera;
     private CharacterController Player;
 
-
-
+    private float NextFire;
+    private float NextFireBigBoy;
+    public float DegatsSubiParSeconde;
 
     Transform m_Transform;
 
@@ -52,7 +53,11 @@ public class PlayerTwo : MonoBehaviour
         if (collision.gameObject.tag == "Monstre")
             ViePlayer.valeur -= 10;
 
-
+        if (collision.gameObject.tag == "BigBoy" && Time.time > NextFireBigBoy)
+        {
+            ViePlayer.valeur -= 25;
+            NextFireBigBoy = Time.time + DegatsSubiParSeconde;
+        }
 
     }
 
@@ -66,8 +71,8 @@ public class PlayerTwo : MonoBehaviour
         //DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
         Player.Move(DirectionDeplacement * m_TranslatationSpeed * Time.deltaTime);
 
-
-        transform.Rotate(0, Input.GetAxis("RigthJoystickX") * Sensi, 0);
+        if (Time.timeScale != 0)
+            transform.Rotate(0, Input.GetAxis("RigthJoystickX") * Sensi, 0);
 
 
 

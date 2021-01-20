@@ -59,14 +59,14 @@ public class monstre : MonoBehaviour
 
         if (GameObject.Find("Player 1") != null && Player1isDead == false)
         {
-            Debug.Log("step 1");
+
             targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
             distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
         }
         else { Player1isDead = true; }
         if (GameObject.Find("Player 2") != null && Player2isDead == false)
         {
-            Debug.Log("step 2");
+
             targetTwo= GameObject.Find("Player 2").GetComponent<Transform>();
             distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
         }
@@ -74,8 +74,7 @@ public class monstre : MonoBehaviour
 
         if (!Player1isDead && !Player2isDead)
         {
-            Debug.Log("PlayerOne : " + Player1isDead);
-            Debug.Log("PlayerTwo : " + Player2isDead);
+
 
             if (distancePlayerOne < distancePlayerTwo)
             {

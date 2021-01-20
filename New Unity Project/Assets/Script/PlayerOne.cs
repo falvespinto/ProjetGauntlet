@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerOne : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -26,8 +27,11 @@ public class PlayerOne : MonoBehaviour
     private Camera mainCamera;
     private CharacterController Player;
 
+    public float DegatsSubiParSeconde;
+    private float NextFire;
+    private float NextFireBigBoy;
 
-
+    bool siEchapPress = false;
 
     Transform m_Transform;
 
@@ -49,11 +53,22 @@ public class PlayerOne : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Monstre")
+        if (collision.gameObject.tag == "Monstre" && Time.time > NextFire)
+        {
             ViePlayer.valeur -= 10;
+            NextFire = Time.time + DegatsSubiParSeconde;
+        }
+
+
+        if (collision.gameObject.tag == "BigBoy" && Time.time > NextFireBigBoy)
+        {
+            ViePlayer.valeur -= 25;
+            NextFireBigBoy = Time.time + DegatsSubiParSeconde;
+        }
 
 
 
+        
     }
 
 
@@ -68,19 +83,28 @@ public class PlayerOne : MonoBehaviour
         Player.Move(DirectionDeplacement * m_TranslatationSpeed * Time.deltaTime);
 
 
-        transform.Rotate(0, Input.GetAxisRaw("Mouse X")*Sensi, 0);
+        //transform.Rotate(0, Input.GetAxisRaw("Mouse X")*Sensi, 0);
 
-        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLength;
-
-        if(groundPlane.Raycast(cameraRay, out rayLength))
+        if (Time.timeScale!=0)
         {
-            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-            Debug.DrawLine(cameraRay.origin, pointToLook, Color.red);
 
-            transform.LookAt(pointToLook);
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLength;
+
+            if (groundPlane.Raycast(cameraRay, out rayLength))
+            {
+                Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+                Debug.DrawLine(cameraRay.origin, pointToLook, Color.red);
+
+                transform.LookAt(pointToLook);
+            }
         }
+ 
+ 
+
+
+
 
         
 

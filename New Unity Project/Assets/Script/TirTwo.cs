@@ -21,7 +21,7 @@ public class TirTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("TireManette") && Time.time > NextFire)
+        if (Input.GetButtonDown("TireManette") && Time.time > NextFire && Time.timeScale!=0)
         {
             GetComponent<AudioSource>().PlayOneShot(SoundTir);
             //GameObject BulletP2 = Instantiate(Projectile, transform.position, transform.rotation) as GameObject;

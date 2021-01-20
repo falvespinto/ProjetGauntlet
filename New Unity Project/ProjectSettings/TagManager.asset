@@ -10,6 +10,7 @@ TagManager:
   - BulletP2
   - ScoreP2
   - ScoreP1
+  - BigBoy
   layers:
   - Default
   - TransparentFX
