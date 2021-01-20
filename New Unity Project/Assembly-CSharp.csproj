@@ -60,7 +60,6 @@
     <Compile Include="Assets\Script\TirTwo.cs" />
     <Compile Include="Assets\Script\PlayerTwo.cs" />
     <Compile Include="Assets\Script\IKControl.cs" />
-    <Compile Include="Assets\Script\Quit.cs" />
     <Compile Include="Assets\Script\Souris.cs" />
     <Compile Include="Assets\Script\monstre.cs" />
     <Compile Include="Assets\Script\CameraPlayer.cs" />
@@ -69,10 +68,10 @@
     <Compile Include="Assets\Script\PlayerOne.cs" />
     <Compile Include="Assets\Script\AutoSpawn.cs" />
     <Compile Include="Assets\Script\PauseMenu.cs" />
+    <Compile Include="Assets\Script\BarVieP2.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
     <Compile Include="Assets\Script\DestroyTir.cs" />
     <Compile Include="Assets\Script\BarVieP1.cs" />
-    <Compile Include="Assets\Script\BarVieP2.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
