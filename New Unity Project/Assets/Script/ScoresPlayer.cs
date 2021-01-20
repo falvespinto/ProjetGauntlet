@@ -7,8 +7,7 @@ public class ScoresPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static int scoreValueP1 = 0;
-    public static int scoreValueP2 = 0;
+    public static int scoreValue = 0;
 
     public Text score;
     void Start()
@@ -20,7 +19,6 @@ public class ScoresPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score : " + scoreValueP1;
-        score.text = "Score : " + scoreValueP2;
+        score.text = "Score : " + scoreValue;
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - ScoreP2
   - ScoreP1
   - BigBoy
+  - Score
   layers:
   - Default
   - TransparentFX

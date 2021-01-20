@@ -39,9 +39,9 @@ public class monstre : MonoBehaviour
             VieEnemie -= 10;
 
         if (collision.gameObject.tag == "Bullet" && VieEnemie <= 0)
-            ScoresPlayer.scoreValueP1 += 10;
+            ScoresPlayer.scoreValue += 10;
         else if (collision.gameObject.tag == "BulletP2" && VieEnemie <= 0)
-            ScoresPlayer.scoreValueP2 += 10;
+            ScoresPlayer.scoreValue += 10;
 
         if (collision.gameObject.tag == "Player")
         {
