@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 506, y: 471}
-  m_MaxSize: {x: 14001, y: 14021}
+  m_MinSize: {x: 507, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 23938
+  controlID: 1076
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1476
     height: 947
-  m_MinSize: {x: 230, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 231, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 23939
+  controlID: 1077
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 292}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 23912
+  controlID: 1000
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,9 +406,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 326.31357, y: 122.97591, z: -59.524857}
+    m_Target: {x: 43.301514, y: 112.578125, z: -92.653946}
     speed: 2
-    m_Value: {x: 326.31357, y: 122.97591, z: -59.524857}
+    m_Value: {x: 43.301514, y: 112.578125, z: -92.653946}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -455,13 +455,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.48058218, y: 0.004470976, z: -0.0024473711, w: -0.8769677}
+    m_Target: {x: -0.5028795, y: 0.085804045, z: -0.050249558, w: -0.8586517}
     speed: 2
-    m_Value: {x: -0.48058218, y: 0.004470976, z: -0.0024473711, w: -0.8769677}
+    m_Value: {x: -0.5015764, y: 0.085876845, z: -0.05011933, w: -0.8593801}
   m_Size:
-    m_Target: 322.43576
+    m_Target: 265.01596
     speed: 2
-    m_Value: 322.43576
+    m_Value: 277.50363
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -619,21 +619,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Script
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Script
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\X-trem\Documents\Unity\Unity\New Unity Project
+  m_LastProjectPath: C:\ProjetGauntlet\New Unity Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 110}
-    m_SelectedIDs: 7e3f0000
-    m_LastClickedID: 16254
-    m_ExpandedIDs: 00000000483f00004a3f00004c3f00004e3f0000503f000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: aa3a0000
+    m_LastClickedID: 15018
+    m_ExpandedIDs: 000000008c3a00008e3a0000903a0000923a0000943a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -661,7 +661,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000483f00004a3f00004c3f00004e3f0000503f000000ca9a3b
+    m_ExpandedIDs: 000000008c3a00008e3a0000903a0000923a0000943a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -770,9 +770,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6c400000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7c4efeffd252feff2857feff865bfeff5460feffe670feff4c88feff9c9cfeffa09cfeffa49cfeff84a0feffdea4feff4ca9feff6caefeffecb2feff5ab7feff16bcfeffc8c3feffccc3feff50c5feff6ac9feff3aecfeff7cfbfeffca34ffffae3affffcc4fffff4850ffff6857fffff85dffff98edffff9cedffffa0edffffb2edffff80f1ffff044e01002e50010034520100285401005e540100ec7f01001a800100dc8a0100068d010040ab02006eab020002bc02009c090300ca090300e6090300d60c0300e6160300
+      m_ExpandedIDs: c8b4ffff18c3ffff32cdffff7cd1ffffc6d5ffff18daffff62defffface2fffff6e6ffff40ebffff8aefffff80f1ffff00000000d05c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

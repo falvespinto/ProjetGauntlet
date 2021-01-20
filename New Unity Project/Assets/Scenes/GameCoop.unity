@@ -4733,7 +4733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7649215702832787492, guid: 13629f8314f6449488b7c5cb9288d380, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7649215702832787501, guid: 13629f8314f6449488b7c5cb9288d380, type: 3}
       propertyPath: m_Enabled
@@ -11869,7 +11869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9141169474709060625, guid: 800fcaa798b9c874eb55ec96b781e683, type: 3}
       propertyPath: FireRate
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 9141169475811332209, guid: 800fcaa798b9c874eb55ec96b781e683, type: 3}
       propertyPath: m_LocalPosition.x
