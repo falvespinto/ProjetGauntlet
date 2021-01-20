@@ -21,5 +21,6 @@ public class ScoresPlayer : MonoBehaviour
     void Update()
     {
         score.text = "Score : " + scoreValueP1;
+        score.text = "Score : " + scoreValueP2;
     }
 }

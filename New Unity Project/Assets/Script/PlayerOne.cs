@@ -12,11 +12,11 @@ public class PlayerOne : MonoBehaviour
     [Tooltip("Rotation speed in */s")]
     [SerializeField] float m_RotSpeed;
 
-    
-    private CharacterController Player;
+
+   
     public int Sensi;
     public int gravite = 20;
-    public int ViePlayer = 100;
+    BarVieP1 ViePlayer = new BarVieP1();
     public float moveSpeed;
     
 
@@ -24,6 +24,7 @@ public class PlayerOne : MonoBehaviour
     private Rigidbody myRigidbody;
     private Vector3 moveVelocity;
     private Camera mainCamera;
+    private CharacterController Player;
 
 
 
@@ -42,12 +43,14 @@ public class PlayerOne : MonoBehaviour
     {
         Player = GetComponent<CharacterController>();
         mainCamera = FindObjectOfType<Camera>();
+        ViePlayer.max = 100;
+        ViePlayer.valeur = 100;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Monstre")
-            ViePlayer -= 10;
+            ViePlayer.valeur -= 10;
 
 
 
@@ -87,7 +90,7 @@ public class PlayerOne : MonoBehaviour
             DirectionDeplacement.y -= gravite * Time.deltaTime;
         }
     
-        if (ViePlayer <= 0)
+        if (ViePlayer.valeur <= 0)
             Destroy(gameObject);
 
     }
