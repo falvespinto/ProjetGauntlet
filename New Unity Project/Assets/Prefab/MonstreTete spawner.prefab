@@ -102,8 +102,8 @@ MonoBehaviour:
   DistanceDeSpawn: 40
   VieSpawn: 150
   PrefabToSpawn: {fileID: 6040444482233656457, guid: afd5212bba25cba43b55540622f08c10, type: 3}
-  SpawnRate: 3
-  MaxSpawn: 8
+  SpawnRate: 2
+  MaxSpawn: 10
   ReSpawn: 1
 --- !u!136 &3994093909393816525
 CapsuleCollider:
