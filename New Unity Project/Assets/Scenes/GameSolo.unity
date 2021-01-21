@@ -12121,7 +12121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9141169474709060625, guid: 800fcaa798b9c874eb55ec96b781e683, type: 3}
       propertyPath: FireRate
-      value: 0.7
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9141169474768492409, guid: 800fcaa798b9c874eb55ec96b781e683, type: 3}
       propertyPath: m_Constraints
