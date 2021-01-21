@@ -38,9 +38,9 @@ public class AutoSpawn : MonoBehaviour
             VieSpawn -= 10;
 
         if (collision.gameObject.tag == "Bullet" && VieSpawn <= 0)
-            ScoresPlayer.scoreValue += 50;
+            ScoreScript.scoreValue += 50;
         else if (collision.gameObject.tag == "BulletP2" && VieSpawn <= 0)
-            ScoresPlayer.scoreValue += 50;
+            ScoreScript.scoreValue += 50;
     }
 
 

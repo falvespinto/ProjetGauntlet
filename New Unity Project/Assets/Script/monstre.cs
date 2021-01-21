@@ -39,9 +39,9 @@ public class monstre : MonoBehaviour
             VieEnemie -= 10;
 
         if (collision.gameObject.tag == "Bullet" && VieEnemie <= 0)
-            ScoresPlayer.scoreValue += 10;
+            ScoreScript.scoreValue += 10;
         else if (collision.gameObject.tag == "BulletP2" && VieEnemie <= 0)
-            ScoresPlayer.scoreValue += 10;
+            ScoreScript.scoreValue += 10;
 
         if (collision.gameObject.tag == "Player")
         {
@@ -55,18 +55,15 @@ public class monstre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(distancePlayerOne);
 
         if (GameObject.Find("Player 1") != null && Player1isDead == false)
         {
-
             targetOne = GameObject.Find("Player 1").GetComponent<Transform>();
             distancePlayerOne = Vector3.Distance(transform.position, targetOne.position);
         }
         else { Player1isDead = true; }
         if (GameObject.Find("Player 2") != null && Player2isDead == false)
         {
-
             targetTwo= GameObject.Find("Player 2").GetComponent<Transform>();
             distancePlayerTwo = Vector3.Distance(transform.position, targetTwo.position);
         }
@@ -96,19 +93,6 @@ public class monstre : MonoBehaviour
         {
             agent.destination = targetOne.position;
         }
-
-        
-
-
-
-
-        //if (GameObject.FindGameObjectsWithTag("Player") != null)
-        //{
-        //    GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
-        //}
-
-
-
 
 
         if (VieEnemie <= 0)

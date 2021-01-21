@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameSolo.unity
     guid: 3bf75162f5fc44e4b97ef31366ec5400
+  - enabled: 1
+    path: Assets/Scenes/EcranFin.unity
+    guid: d9899d19548b3684db8998aff19d6e54
   m_configObjects: {}
