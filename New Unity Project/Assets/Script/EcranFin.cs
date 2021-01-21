@@ -7,23 +7,17 @@ public class EcranFin : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene().name == "GameCoop")
+        if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
-        else if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene().name == "GameSolo")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
 
+            SceneManager.LoadScene(3);
+        }
     }
-
-
 
 
     public void RetourMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene(0);
     }
 
 }
