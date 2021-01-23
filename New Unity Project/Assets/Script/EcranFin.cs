@@ -14,6 +14,14 @@ public class EcranFin : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
+
 
     public void RetourMenu()
     {

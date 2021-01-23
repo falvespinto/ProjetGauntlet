@@ -72,7 +72,6 @@ public class PlayerOne : MonoBehaviour
     }
 
 
-
     // Update is called once per frame
     void Update()
     {
@@ -99,14 +98,7 @@ public class PlayerOne : MonoBehaviour
 
                 transform.LookAt(pointToLook);
             }
-        }
- 
- 
-
-
-
-
-        
+        }        
 
         //Gravité
         if(!Player.isGrounded)

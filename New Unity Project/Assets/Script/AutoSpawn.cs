@@ -43,23 +43,19 @@ public class AutoSpawn : MonoBehaviour
             ScoreScript.scoreValue += 50;
     }
 
-
+    private void godMod()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
     // Update is called once per frame
     void Update()
     {
-
-
-
-
-
-
-
-
-
-
-
+        godMod();
 
         if (GameObject.Find("Player 1") != null && Player1isDead == false)
         {
@@ -163,15 +159,9 @@ public class AutoSpawn : MonoBehaviour
 
         }
 
-
-
-
-
-
-
-
         if (VieSpawn <= 0)
             Destroy(gameObject);
+
 
     }
 

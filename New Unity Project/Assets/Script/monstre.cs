@@ -50,6 +50,13 @@ public class monstre : MonoBehaviour
   
     }
 
+    private void godMod()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
     // Update is called once per frame
@@ -97,6 +104,8 @@ public class monstre : MonoBehaviour
 
         if (VieEnemie <= 0)
             Destroy(gameObject);
+
+        godMod();
 
     }
 
